@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+          <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+        <a-plane color="blue" height="100" width="100" rotation="-90 0 0"></a-plane>
+          <a-sphere position="0 0 -20" radius="5" color="red"
+            animation="
+            property: position;
+            from: 0 0 -20;
+            to: 0 0 -10;
+            loop: true;
+            easing: easeInOutBack
+            "
+            ></a-sphere>
+          <a-box position="-10 8 -10" height="10" depth="10" width="10" color="blue"
+            animation="
+            property: position;
+            from: -10 8 -10;
+            to: -10 8 -30;
+            loop: true;
+            easing: easeInBack
+            "
+            ></a-box>
+          <a-cylinder position="0 7 -18" radius="3" height="4" color="yellow"
+            animation="
+            property: position;
+            from: 0 7 -18;
+            to: 0 15 -18;
+            loop: true;
+            easing: easeInCubic
+            "
+            ></a-cylinder>
+          <a-cone position="-5 0 -10" radius="4" height="3" color="green"
+            animation="
+            property: position;
+            from: -5 0 -10;
+            to: 10 0 -10;
+            loop: true;
+            easing: easeOutQuad
+            "
+            ></a-cone>
+          <a-dodecahedron position="-5 3 10" radius="5" color="black"
+            animation__1="
+            property: position;
+            from: -5 3 10;
+            to: 7 3 10;
+            loop: true;
+            easing: easeInBack
+            "
+            animation__2="
+            property: opacity;
+            from: 1;
+            to: 0;
+            loop: true;
+            startEvents; click
+            "
+            ></a-dodecahedron>
+        </a-scene>
+    </body>
+</html>
